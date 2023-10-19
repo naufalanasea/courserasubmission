@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book a Table at the Little Lemon</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#book-table-button").click(function() {
+        var name = $("#name").val();
+        var date = $("#date").val();
+        var time = $("#time").val();
+        var numberOfPeople = $("#number-of-people").val();
+
+        // Save the reservation information to the database
+
+        // Display a confirmation message to the user
+        alert("Your table has been booked successfully!");
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Book a Table at the Little Lemon</h1>
+
+  <form action="/book-table" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" />
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date" />
+
+    <label for="time">Time:</label>
+    <input type="time" name="time" id="time" />
+
+    <label for="number-of-people">Number of People:</label>
+    <input type="number" name="number-of-people" id="number-of-people" />
+
+    <button type="submit" id="book-table-button">Book Table</button>
+  </form>
+</body>
+</html>
